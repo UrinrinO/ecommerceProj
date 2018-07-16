@@ -1,0 +1,22 @@
+<li class="product">
+    <figure class="img-animi">
+        <div class="actions trans">
+            <a href="#"><i class="pe-7s-like"></i></a>
+            <a href="#"><i class="pe-7s-cart"></i></a>
+            <a href="#"><i class="pe-7s-look"></i></a>
+        </div>
+        {% if instance.image %}
+         <a href="#"><img src="{{ instance.image.url }}" alt=""></a>
+        {% endif %}
+    </figure>
+
+    <div class="price-wrap">
+        <div class="price"><del>$189.00</del><ins>$189.00 </ins></div>
+        <div class="star-rate">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+        </div>
+    </div>
+
+    <h4><a href="#">{{ instance.title}}</a></h4> 
+</li>
+<!--product-->

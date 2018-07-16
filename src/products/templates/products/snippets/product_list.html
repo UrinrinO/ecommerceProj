@@ -1,0 +1,39 @@
+
+    
+        <figure class="img-animi">                                        
+            {% if instance.image %}
+                <a href="#"><img src="{{ instance.image.url }}" alt=""></a>
+            {% endif %}
+        </figure>
+
+        <div class="pdt-right">
+            <div class="pdt-cat bm-5">
+                <span>{{ instance.categories }}</span>
+            </div>
+
+            <div class="flx-element bm-10">
+                <h3 class="bm-0">
+                    <a href="{{ instance.get_absolute_url }}">{{ instance.title }}</a>
+                    <!--  <a href="{% url 'products:detail' slug=instance.slug  %}" class="btn btn-warning">URL shortcut</a> -->
+                </h3>
+
+                <div class="star-rate">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+                </div>
+            </div>
+            <!--flex element-->
+
+            <div class="disc bm-20">
+                {{ instance.description|truncatewords:45 }}
+            </div>
+
+            <div class="price bm-25"><del>$189.00</del><ins>${{ instance.price }} </ins></div>
+
+            <div class="btn-wrap">
+                <a href="#" class="btn bdr"><i class="pe-7s-cart"></i> ADD TO CART</a>
+                <a href="#" class="btn bdr"><i class="pe-7s-like"></i></a> 
+                <a href="#" class="btn bdr"><i class="pe-7s-look"></i></a>
+            </div>
+            <!--action-->
+        </div>
+    <!--product-->

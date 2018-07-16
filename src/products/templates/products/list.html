@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="pg-header parallax-window overlay parlx-pad sec-mar" data-parallax="scroll" data-image-src="{% static 'images/page-title2.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 text-center"> 
+                    <h2>Shop list full</h2>
+                    <ul class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Shop</li>
+                    </ul>
+                </div>              
+            </div>
+        </div>
+    </div>
+    <!--page title-->
+
+	<main class="main"> 
+	    <div class="container"> 
+	        <div class="sorting-wrap">
+	            <div class="sort-btn">
+	                <a href="shop-grid-full.html" class="btn btn-sort"><i class="fa fa-th"></i> GRID</a>
+	                <a href="shop-list-full.html" class="btn btn-sort active"><i class="fa fa-list-ul"></i> list</a>
+	            </div>
+	            <!--button-->
+
+	            <div class="right">
+	                <form method="post">
+	                    <label>Sort by :</label>
+	                    <select>
+	                        <option>Default sorting</option>
+	                        <option>Sort by popularity</option> 
+	                        <option>Sort by price: low to high</option>
+	                        <option>Sort by price: high to low</option>
+	                    </select>
+	                </form>
+
+	                <div class="pagination">
+	                    <ul class="page-numbers">
+	                        <li><a class="prev page-numbers" href="#">&lt;</a></li>
+	                        <li><span class="page-numbers current">1</span></li>
+	                        <li><a class="page-numbers" href="#">2</a></li>
+	                        <li><a class="page-numbers" href="#">3</a></li>
+	                        <li><a class="next page-numbers" href="#">&gt;</a></li>
+	                    </ul>
+	                </div>   
+	            </div>
+	        </div>
+	        <!--sorting wrap-->
+
+	        <div class="sec-mar"> 
+	            <div class="row"> 
+	                <div class="col-md-12 col-sm-12 col-xs-12 product-wrap lst-vw product-listing">
+	                    <ul class="products">
+	                    	{% for obj in object_list %}
+	                    	<li class="product">
+	                    	{% include 'products/snippets/product_list.html' with instance=obj %}
+	                    	</li>
+	                    	{% endfor %}
+	                    </ul>
+	                </div>
+	                <!--product wrap-->
+	            </div>
+
+	            <div class="row">
+	                <div class="col-md-12 col-sm-12">
+	                    <div class="bottom-sorting">
+	                        <div class="result-count">Showing 1 - 12 of 120 results</div>
+	                        <!--result count-->
+
+	                        <div class="pagination">
+	                            <ul class="page-numbers">
+	                                <li><a class="prev page-numbers" href="#">&lt;</a></li>
+	                                <li><span class="page-numbers current">1</span></li>
+	                                <li><a class="page-numbers" href="#">2</a></li>
+	                                <li><a class="page-numbers" href="#">3</a></li>
+	                                <li><a class="next page-numbers" href="#">&gt;</a></li>
+	                            </ul>
+	                        </div>
+	                        <!--pegination--> 
+	                    </div>  
+	                </div>                 
+	            </div> 
+	        </div>
+	        <!--feature item-->  
+	    </div>  
+	</main>
+	<!--main-->
+{% endblock %}    

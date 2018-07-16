@@ -1,0 +1,232 @@
+{% load static %}
+
+{% url 'home' as home_url %}
+{% url 'contact' as contact_url %}
+{% url 'products:list' as product_list_url %}
+{% url 'login' as login_url %}
+{% url 'register' as register_url %}
+{% url 'cart:home' as cart_url %}
+
+<header class="menu-full-screen header-transparent">
+    <div class="top-bar bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12 site-dir hidden-xs">
+                    <a href="tel:+01123456789"><i class="fa fa-phone"></i> +234 803 050 1670</a>
+                    <a href="contact@mediaprongr.com"><i class="fa fa-envelope"></i> contact@mediaprongr.com</a>
+                </div>
+                <!--site dir-->
+
+                <div class="col-md-6 col-sm-6 col-xs-12 header-right pull-right text-right">
+
+                    <div class="lang">
+                        <div class="dropdown">
+                            <span>
+                                <a href="{% url 'home' %}" class="bg-dark"> HOME </a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="lang">
+                        <div class="dropdown">
+                            <span>
+                                <a href='/products' class="bg-dark"> PRODUCTS </a> 
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="lang">
+                        <div class="dropdown">
+                            <span class="drop-down-toggle">
+                                <img src="assets/images/flag1.png" alt=""> Eng <i class="fa fa-angle-down"></i>
+                            </span>
+                            <ul class="drop-link trans">
+                                <li><a href="#" class="bg-dark">English</a></li>
+                                <li><a href="#" class="bg-dark">Spanish</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--lang-->
+
+                    <div class="currency">
+                        <div class="dropdown">
+                            <span class="drop-down-toggle">
+                                USD <i class="fa fa-angle-down"></i>
+                            </span>
+                            <ul class="drop-link trans">
+                                <li><a href="#" class="bg-dark">USD</a></li>
+                                <li><a href="#" class="bg-dark">EUR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--currency-->
+
+                    {% if request.user.is_authenticated %}
+                    <div class="account-wrap">
+                        <div class="dropdown">
+                            <span class="drop-down-toggle">
+                                <i class="fa fa-user"></i> ACCOUNT <i class="fa fa-angle-down"></i>
+                            </span>
+                            <ul class="drop-link trans">
+                                <li><a href="login.html" class="bg-dark">Logout</a></li>
+                                <li><a href="signup.html" class="bg-dark">View Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--account wrap-->
+
+                    {% else %}
+
+                    <div class="account-wrap">
+                        <div class="dropdown">
+                            <span class="drop-down-toggle">
+                                <i class="fa fa-user"></i> ACCOUNT <i class="fa fa-angle-down"></i>
+                            </span>
+                            <ul class="drop-link trans">
+                                <li><a href="login.html" class="bg-dark">Login</a></li>
+                                <li><a href="signup.html" class="bg-dark">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--account wrap-->
+                    
+                    {% endif %}
+
+                    <div class="header-cart">
+                        <a href="#" class="crt-btn pe-7s-cart">
+                            <span class="pri-bg radius-circle pri-font">{{ request.session.cart_items }}</span>
+                        </a>
+                        <div class="widget widget_shopping_cart ">
+                            <h5 class="title">Your cart have (<span>2</span> Items)</h5>
+                            <ul class="evo-mini-cart">
+                                <li class="item">
+                                    <figure class="product-thumb">
+                                       <a href="#"><img src="assets/images/cart-pdt-thumb3.jpg" alt=""></a>
+                                    </figure>
+                                    <!--product thumb-->
+
+                                    <div class="item-disc">
+                                        <h6 class="pri-font">Ladies black full sleeves</h6>
+                                        <span class="qty">1</span> X <span class="item-price">$110</span>
+                                    </div>
+
+                                    <a href="#" class="delete-item"><i class="pe-7s-close"></i></a>
+                                </li>
+
+                                <li class="item">
+                                    <figure class="product-thumb">
+                                       <a href="#"><img src="assets/images/cart-pdt-thumb1.jpg" alt=""></a>
+                                    </figure>
+                                    <!--product thumb-->
+
+                                    <div class="item-disc">
+                                        <h6 class="pri-font">Ladies black top</h6>
+                                        <span class="qty">1</span> X <span class="item-price">$110</span>
+                                    </div>
+
+                                    <a href="#" class="delete-item"><i class="pe-7s-close"></i></a>
+                                </li>
+                            </ul>
+
+                            <div class="mini-cart-total flx-element">
+                                <span>Subtotal</span> 
+                                <span>$220.00</span>
+                            </div>
+
+                            <div class="btn-hold flx-element">
+                                <a class="btn text-uppercase" href="{{ cart_url }}">view cart</a>
+                                <a class="btn pri-bg text-uppercase" href="checkout.html">checkout</a>
+                            </div>
+                        </div>
+                        <!--mini cart-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--top bar-->
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="header-mid">                       
+                <div class="navbar-header"> 
+                    <a class="navbar-brand" href="index-2.html"><img src="assets/images/logo.png" alt=""></a> 
+                    <!--<a class="navbar-brand site-brand" href="index.html">evostore</a>-->  
+                </div>
+                <!-- navbar header -->
+
+                <button class="nav-tgl"></button>
+
+                <nav class="full-screen">
+                    <div class="menu-wrap">  
+                        <div class="container">
+                        <div class="row scrn-wrp">
+                            <div class="col-md-3 col-sm-3 column">
+                                <h4 class="text-white">Pages</h4>
+                                <ul class="menu">
+                                    <li><a href="index-2.html">Home V1</a></li>
+                                    <li><a href="home-accessories.html">Home accessories</a></li>
+                                    <li><a href="electronics.html">Home electronics</a></li>
+                                    <li><a href="about.html">about</a></li>        
+                                    <li><a href="blog-v1.html">blog v1</a></li>
+                                    <li><a href="blog-v2.html">blog-v2</a></li> 
+                                    <li><a href="blog-single.html">blog single</a></li> 
+                                    <li><a href="faq.html">faq</a></li>            
+                                    <li><a href="page-title-v2.html">page title v2</a></li> 
+                                    <li><a href="404.html">404</a></li>
+                                    <li><a href="contact.html">contact</a></li> 
+                                </ul>
+                            </div>
+
+                            <div class="col-md-3 col-sm-3 column">
+                                <h4 class="text-white">Shop</h4>
+                                <ul class="menu">
+                                    <li><a href="shop-grid-full.html">Grid view</a></li>
+                                    <li><a href="shop-list-full.html">List view</a></li> 
+                                    <li><a href="shop-grid-left-sidebar.html">Grid left sidebar</a></li>
+                                    <li><a href="shop-grid-right-sidebar.html">grid right sidebar</a></li>
+                                    <li><a href="shop-list-left-sidebar.html">list left sidebar</a></li>
+                                    <li><a href="shop-list-right-sidebar.html">list right sidebar</a></li>
+                                    <li><a href="product-single-v1.html">Product single v1</a></li>
+                                    <li><a href="product-single-v2.html">product single v2</a></li>
+                                    <li><a href="wishlist.html">wishlist</a></li>
+                                    <li><a href="cart.html">cart</a></li>
+                                    <li><a href="off-canvas-cart.html">cart off canvas</a></li>
+                                    <li><a href="checkout.html">checkout</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-3 col-sm-3 column">
+                                <h4 class="text-white">Extras</h4>
+                                <ul class="menu">
+                                    <li><a href="#">Coats & Jackets</a></li>
+                                    <li><a href="#">Raincoats</a></li>
+                                    <li><a href="#">Evening</a></li>
+                                    <li><a href="#">Bras</a></li>
+                                    <li><a href="#">Clothing Accessories</a></li>
+                                    <li><a href="#">Sweaters</a></li>
+                                    <li><a href="#">Winter Shrugs</a></li>
+                                    <li><a href="#">Tops , tees & shirts</a></li>
+                                    <li><a href="#">Dresses & Jumpsuits</a></li>
+                                    <li><a href="#">Trousers & Jeans</a></li>
+                                    <li><a href="#">Leggings & Jeggings</a></li> 
+                                </ul>
+                            </div>
+
+                            <div class="col-md-3 col-sm-3 column hidden-xs">
+                                <a href="#"><img src="assets/images/shop-sidebar.jpg" alt=""></a> 
+                            </div>  
+                        </div>
+                        </div>
+                    </div>
+                </nav> 
+            </div>
+
+            <button class="search-toogle btn bg-dark"><i class="icofont icofont-search"></i></button>
+            <!--header mid-->
+        </div>   
+    </nav>
+
+    {% include 'search/snippets/search-form.html' %} 
+</header>
+<!--header-->

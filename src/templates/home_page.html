@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+        <div class="hero-banner sec-mar">
+           <div class="slider-wrapper"> 
+                <div class="slider">
+                    <div class="fs_loader"></div>
+                    <div class="slide">
+                        <img src="{% static 'images/slider-bg1.jpg' %}" alt="" data-in="fade">
+                        
+                        <img src="{% static 'images/banner-shoe.png' %}" width="1050" height="850" alt="" data-position="5,780" data-in="left" >
+                        
+                        <h3 data-position="300,200" data-in="top" data-delay="200">MEN'S SHOE COLLECTION</h3>
+
+                        <h2 class="text-white text-shadow pri-font" data-position="350,200" data-in="top" data-delay="300">
+                            <strong>UPTO <span class="color-brand">50<sup>%<br>OFF</sup></span></strong>
+                        </h2> 
+
+                        <div data-position="510,205" data-in="bottom" data-delay="800">
+                            <a class="btn btn-default">SHOP NOW <i class="fa "></i></a>
+                        </div>
+                    </div>
+                    <!--slide 1-->
+
+                    <div class="slide">
+                        <img src="{% static 'images/slider-bg2.jpg' %}" alt="" data-in="fade">
+                        
+                        <img src="{% static 'images/banner-girl.png' %}" width="1225" height="775"  alt="" data-position="125,850" data-in="left">
+                        
+                        <h3 data-position="300,200" data-in="top"  data-delay="200">WOMEN'S SUMMER COLLECTION</h3>
+
+                        <h2 class="text-white text-shadow pri-font" data-position="350,200" data-in="top" data-delay="300">
+                            <strong>UPTO <span class="color-brand">30<sup>%<br>OFF</sup></span></strong>
+                        </h2> 
+
+                        <div data-position="510,205" data-in="bottom" data-delay="800">
+                            <a class="btn btn-default">SHOP NOW <i class="fa "></i></a>
+                        </div>
+                    </div>
+                    <!--slide 2-->                         
+                </div> 
+            </div>
+        </div>
+        <!--banner-->
+
+        <main class="main">
+
+            <div class="trending sec-mar"> 
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <div class="title mid-sep"><h2>Trending Products</h2></div>
+                        </div> 
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 product-wrap">
+                            <ul class="products product-slider">
+                                <li class="product">
+                                    <figure class="img-animi">
+                                        <div class="actions trans">
+                                            <a href="#"><i class="pe-7s-like"></i></a>
+                                            <a href="#"><i class="pe-7s-cart"></i></a>
+                                            <a href="#"><i class="pe-7s-look"></i></a>
+                                        </div>
+                                        <a href="#"><img src="{% static 'images/product1.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <div class="price-wrap">
+                                        <div class="price"><del>$189.00</del><ins>$189.00 </ins></div>
+                                        <div class="star-rate">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4><a href="#">Ladies black full sleeves</a></h4> 
+                                </li>
+                                <!--product-->
+
+                                <li class="product new flip">
+                                    <figure class="img-animi">
+                                        <div class="tag new">new</div>
+                                        <div class="actions trans">
+                                            <a href="#"><i class="pe-7s-like"></i></a>
+                                            <a href="#"><i class="pe-7s-cart"></i></a>
+                                            <a href="#"><i class="pe-7s-look"></i></a>
+                                        </div>
+                                        <a href="#" class="front"><img src="{% static 'images/product2.jpg' %}" alt=""></a>
+                                        <a href="#" class="back"><img src="{% static 'images/product6.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <div class="price-wrap">
+                                        <div class="price"><ins>$109.00 </ins></div>
+                                        <div class="star-rate">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4><a href="#">Mens Shirt</a></h4> 
+                                </li>
+                                <!--product-->
+
+                                <li class="product flip">
+                                    <figure class="img-animi">
+                                        <div class="actions trans">
+                                            <a href="#"><i class="pe-7s-like"></i></a>
+                                            <a href="#"><i class="pe-7s-cart"></i></a>
+                                            <a href="#"><i class="pe-7s-look"></i></a>
+                                        </div>
+                                        <a href="#" class="front"><img src="{% static 'images/product3.jpg' %}" alt=""></a>
+                                        <a href="#" class="back"><img src="{% static 'images/product1.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <div class="price-wrap">
+                                        <div class="price"><del>$80.00</del><ins>$75.00 </ins></div>
+                                        <div class="star-rate">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4><a href="#">Ladies black top</a></h4> 
+                                </li>
+                                <!--product-->
+
+                                <li class="product">
+                                    <figure class="img-animi">
+                                        <div class="actions trans">
+                                            <a href="#"><i class="pe-7s-like"></i></a>
+                                            <a href="#"><i class="pe-7s-cart"></i></a>
+                                            <a href="#"><i class="pe-7s-look"></i></a>
+                                        </div>
+                                        <a href="#"><img src="{% static 'images/product4.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <div class="price-wrap">
+                                        <div class="price"><del>$99.00</del><ins>$95.00 </ins></div>
+                                        <div class="star-rate">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4><a href="#">Ladies blue jeans</a></h4> 
+                                </li>
+                                <!--product-->
+
+                                <li class="product new flip">
+                                    <figure class="img-animi">
+                                        <div class="tag new">new</div>
+                                        <div class="actions trans">
+                                            <a href="#"><i class="pe-7s-like"></i></a>
+                                            <a href="#"><i class="pe-7s-cart"></i></a>
+                                            <a href="#"><i class="pe-7s-look"></i></a>
+                                        </div>
+                                        <a href="#" class="front"><img src="{% static 'images/product2.jpg' %}" alt=""></a>
+                                        <a href="#" class="back"><img src="{% static 'images/product6.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <div class="price-wrap">
+                                        <div class="price"><ins>$109.00 </ins></div>
+                                        <div class="star-rate">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4><a href="#">Mens Shirt</a></h4> 
+                                </li>
+                                <!--product-->
+
+                                <li class="product flip">
+                                    <figure class="img-animi">
+                                        <div class="actions trans">
+                                            <a href="#"><i class="pe-7s-like"></i></a>
+                                            <a href="#"><i class="pe-7s-cart"></i></a>
+                                            <a href="#"><i class="pe-7s-look"></i></a>
+                                        </div>
+                                        <a href="#" class="front"><img src="{% static 'images/product3.jpg' %}" alt=""></a>
+                                        <a href="#" class="back"><img src="{% static 'images/product1.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <div class="price-wrap">
+                                        <div class="price"><del>$80.00</del><ins>$75.00 </ins></div>
+                                        <div class="star-rate">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-full"></i>
+                                        </div>
+                                    </div>
+
+                                    <h4><a href="#">Ladies black top</a></h4> 
+                                </li>
+                                <!--product-->
+                            </ul>  
+                        </div>        
+                    </div>
+                </div> 
+            </div>
+            <!--tranding--> 
+
+            <div class="shop-feature sec-bg sec-mar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 wrap">
+                            <div class="feature-box text-white">
+                                <span class="icon"><i class="icofont icofont-free-delivery"></i></span>
+                                <h5>Free Shipping <span class="pri-font">Order over $200</span></h5>
+                            </div>
+                        </div>
+                        <!--shipping-->
+
+                        <div class="col-md-3 col-sm-3 wrap">
+                            <div class="feature-box text-white">
+                                <span class="icon"><i class="icofont icofont-reply"></i></span>
+                                <h5>return back <span class="pri-font">30 days return time</span></h5>
+                            </div>
+                        </div>
+                        <!--return-->
+
+                        <div class="col-md-3 col-sm-3 wrap">
+                            <div class="feature-box text-white">
+                                <span class="icon"><i class="icofont icofont-money"></i></span>
+                                <h5>secure payment <span class="pri-font">Best payment method </span></h5>
+                            </div>
+                        </div>
+                        <!--payment-->
+
+
+                        <div class="col-md-3 col-sm-3 wrap">
+                            <div class="feature-box text-white">
+                                <span class="icon"><i class="icofont icofont-live-support"></i></span>
+                                <h5>24 / 7 support <span class="pri-font">Best support system</span></h5>
+                            </div>
+                        </div>
+                        <!--support-->
+                    </div>    
+                </div>
+            </div> 
+            <!--shop feature-->
+
+            <div class="news blog-holder sec-mar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                            <div class="title mid-sep"><h2>Latest news</h2></div>
+                        </div> 
+                    </div> 
+                    <!--title-->
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 blog-wrap">
+                            <figure class="img-animi">
+                                <div class="entry-date sec-font"><span class="pri-font">aug 10</span>2017</div>
+                                <a href="#"><img src="{% static 'images/news1.jpg' %}" alt=""></a>
+                            </figure>
+
+                            <h3 class="post-title">
+                                <a href="#">Proactively incubate plug-and-play collaboration.</a>
+                            </h3> 
+
+                            <div class="content-hold">
+                                <p>
+                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, magnis dis parturient montes.
+                                </p>
+                            </div>
+                            <!--content-->
+
+                            <a class="btn faa-parent animated-hover">Read more <i class="fa fa-long-arrow-right faa-passing"></i></a>
+                        </div> 
+                        <!--single blog-->
+
+                        <div class="col-md-4 col-sm-4 col-xs-12 blog-wrap">
+                            <figure class="img-animi">
+                                <div class="entry-date sec-font"><span class="pri-font">aug 10</span>2017</div>
+                                <a href="#"><img src="{% static 'images/news2.jpg' %}" alt=""></a>
+                            </figure>
+
+                            <h3 class="post-title">
+                                <a href="#">Collaboratively seize value-added outsourcing.</a>
+                            </h3> 
+
+                            <div class="content-hold">
+                                <p>
+                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, magnis dis parturient montes.
+                                </p>
+                            </div>
+                            <!--content-->
+
+                            <a class="btn faa-parent animated-hover">Read more <i class="fa fa-long-arrow-right faa-passing"></i></a>
+                        </div> 
+                        <!--single blog-->
+
+                        <div class="col-md-4 col-sm-4 col-xs-12 blog-wrap">
+                            <figure class="img-animi">
+                                <div class="entry-date sec-font"><span class="pri-font">aug 10</span>2017</div>
+                                <a href="#"><img src="{% static 'images/news3.jpg' %}" alt=""></a>
+                            </figure>
+
+                            <h3 class="post-title">
+                                <a href="#">Conveniently embrace B2C testing.</a>
+                            </h3> 
+
+                            <div class="content-hold">
+                                <p>
+                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, magnis dis parturient montes.
+                                </p>
+                            </div>
+                            <!--content-->
+
+                            <a class="btn faa-parent animated-hover">Read more <i class="fa fa-long-arrow-right faa-passing"></i></a>
+                        </div> 
+                        <!--single blog-->   
+                    </div>       
+                </div>
+            </div>
+            <!--news-->
+
+            <div class="subscription">
+                <div class="bg-soft-gray sec-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 text-center">
+                                <h3 class="text-uppercase">newsletter</h3>
+                                <div class="content-hold bm-30">
+                                    <p>Subscribe our newsletter and receive updates on letest arrivals, special offers, discount offers and many more...</p>
+                                </div>
+
+                                <form action="#">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Enter your email address.">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="submit" value="subscribe">
+                                    </div>
+                                </form>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--subscription--> 
+        </main>
+        <!--main-->
+
+        <div class="modal fade" id="newsletter">
+            <div class="modal-dialog">
+                <div class="modal-content">                     
+                    <div class="modal-body">                             
+                        <div class="content-hold">
+                            <h3 class="text-uppercase bm-10">JOIN OUR newletter</h3>
+                            <p>Sign up For Exclusive Updates, New Arrivals and and Discount offers.</p>
+
+                            <form>
+                                <div class="form-group bm-0">
+                                    <input type="text" placeholder="Email address">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </form>
+                        </div> 
+                    </div> 
+                </div>
+                <!-- /.modal-content -->
+            </div> 
+        </div>
+        <!-- /.modal -->
+
+{% endblock %}
+
+
+
+<h1>{{ title }}</h1>
+<p>Test Page</p>
+<img src="{% static 'images/banner-shoe.png' %}" class="img-fluid">
+<img src="{% static 'images/cart-pdt-thumb3.jpg' %}" alt="">
+	
+<h3>{{ premium_content }} </h3>
